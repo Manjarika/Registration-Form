@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Regform</title>
+        <style>
+            body{
+                  background-image: linear-gradient(to right, purple,pink);
+            }
+            table
+            {
+                height: 60%;
+                width: 50%;
+                 background-color: white;
+            }
+        </style>
+        <script>
+            function myfun()
+            {
+                var a=document.getElementById("z1").value;
+                var b=document.getElementById("z2").value;
+                var c=document.getElementById("z3").value;
+                var d=document.getElementById("z4").value;
+                var gender = document.querySelector('input[name="gender"]:checked').value;
+                console.log(a);
+                console.log(b);
+                console.log(c); 
+                console.log(d);
+                console.log(gender);
+                document.getElementById("reg").innerHTML = `Name: ${a} <br> Username: ${b} <br> Email: ${c} <br> Mobile number: ${d}<b> Gender: ${gender}`;
+
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <table>
+            <h2>Registration Form</h2>
+            <tr>
+                <td><label><b>Full Name</b></label><br><br>
+                <input type="text" name="Name" placeholder="Enter full name"id="z1"></td> 
+                <td><label><b>User Name</b></label><br><br>
+                <input type="text" name="Name" placeholder="Enter User Name"id="z2"></td> 
+            </tr>
+            <tr>
+                <td><label><b>Email</b></label><br><br>
+                <input type="email" name="Email" placeholder="Enter your email"id="z3"></td> 
+                <td><label><b>Number</b></label><br><br>
+                <input type="tel" name="mobnum" placeholder="Enter mob number"id="z4"></td> 
+            </tr>
+            <tr>
+                <td><label><b>Password</b></label><br><br>
+                <input type="password" name="password" placeholder="Enter your password"></td> 
+                <td><label><b>Confirm Password</b></label><br><br>
+                <input type="password" name="confirmpass" placeholder="Confirm Password"></td> 
+            </tr>
+            <tr>
+                <td><b>Gender</td></b></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="gender" value="Male"><label>Male</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="Female"><label>Female</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="Others"><label>Others</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="Register" value="Register" id="submit" onclick="myfun()"/>
+                </td>
+            </tr>
+        </table>
+        <p id="reg"></p>
+        </center>
+    </body>
+</html>
